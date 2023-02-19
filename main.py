@@ -26,7 +26,7 @@ def main():
             calculo.calcular_gasto(distancia, consumo)
         )
     except ValueError as erro:
-        print('O valor recebido não é válido')
+        print('O valor recebido não é válido. Favor inserir o valor corretamente.')
 
 
 if __name__ == '__main__':
