@@ -18,12 +18,14 @@ def main():
 
     try:
         distancia = float(input('Qual a distância em Quilômetros a ser percorrida?'))
-        consumo = float(input('Qual o consumo em litros por Kilometro percorrido?'))
+        consumo_alcool = float(input('Qual o consumo em litros de Álcool por Kilometro percorrido?'))
+        consumo_gasolina = float(input('Qual o consumo em litros de Gasolina por Kilometro percorrido?'))
+        consumo_diesel = float(input('Qual o consumo em litros de Gasolina por Kilometro percorrido?'))
 
         calculo = Calculo()
 
         print(
-            calculo.calcular_gasto(distancia, consumo)
+            calculo.calcular_gasto(distancia, consumo_alcool, consumo_gasolina, consumo_diesel)
         )
     except ValueError as erro:
         print('O valor recebido não é válido. Favor inserir o valor corretamente.')

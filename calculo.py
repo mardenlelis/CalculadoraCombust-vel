@@ -5,22 +5,29 @@ class Calculo:
         self.__valor_alcool = 3.80
         self.__valor_diesel = 3.90
 
-    def calcular_gasto(self, distancia, consumo):
-        if(distancia <= 0 and consumo <= 0):
-            raise Exception('O valor recebido não pode ser menor ou igual a zero.')
+    def calcular_gasto(self, distancia, consumo_alcool, consumo_gas, consumo_dies):
+        if(distancia <= 0 and (consumo_alcool <= 0) and (consumo_gas <= 0)):
+            raise Exception('Os valores recebidos não podem ser menor ou igual a zero.')
         elif(distancia <= 0):
             raise Exception('O valor da distância não pode ser menor ou igual a zero.')
-        elif(consumo <= 0):
-            raise Exception('O valor do consumo não pode ser menor ou igual a zero.')
+       
+        if(consumo_gas > 0):
+            gasto_gasolina = round(
+            (distancia / consumo_gas) * self.__valor_gasolina, 2)
+        else:
+            raise Exception('Valor do consumo do combustível gasolina não informado.')
 
-        gasto_gasolina = round(
-            (distancia / consumo) * self.__valor_gasolina, 2)
+        if(consumo_alcool > 0):
+            gasto_alcool = round(
+            (distancia / consumo_alcool) * self.__valor_alcool, 2)
+        else:
+             raise Exception('Valor do consumo do combustível gasolina não informado.')
 
-        gasto_alcool = round(
-            (distancia / consumo) * self.__valor_alcool, 2)
-
-        gasto_diesel = round(
-            (distancia / consumo) * self.__valor_diesel, 2)
+        if(consumo_dies > 0):
+            gasto_diesel = round(
+            (distancia / consumo_dies) * self.__valor_diesel, 2)
+        else:
+            gasto_diesel = 0
 
         return """
         O valo total gasto para cada tipo de combustível será de:
