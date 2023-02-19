@@ -8,6 +8,10 @@ class Calculo:
     def calcular_gasto(self, distancia, consumo):
         if(distancia <= 0 and consumo <= 0):
             raise Exception('O valor recebido não pode ser menor ou igual a zero.')
+        elif(distancia <= 0):
+            raise Exception('O valor da distância não pode ser menor ou igual a zero.')
+        elif(consumo <= 0):
+            raise Exception('O valor do consumo não pode ser menor ou igual a zero.')
 
         gasto_gasolina = round(
             (distancia / consumo) * self.__valor_gasolina, 2)
