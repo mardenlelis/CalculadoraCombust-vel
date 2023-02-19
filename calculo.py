@@ -30,7 +30,7 @@ class Calculo:
             gasto_diesel = 0
 
         return """
-        O valo total gasto para cada tipo de combustível será de:
+        O valo total gasto para cada tipo de combustível será de: dfsfsd
         
         Gasolina --> R$ {}
         Alcool   --> R$ {}
