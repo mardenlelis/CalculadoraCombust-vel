@@ -21,9 +21,9 @@ class Calculo:
         return """
         O valo total gasto para cada tipo de combustível será de:
         
-        Gasolina: R$ {}
-        Alcool  : R$ {}
-        Diesel  : R$ {}
+        Gasolina --> R$ {}
+        Alcool   --> R$ {}
+        Diesel   --> R$ {}
         """.format(
             gasto_gasolina, gasto_alcool, gasto_diesel
         )
