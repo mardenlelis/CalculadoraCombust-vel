@@ -21,7 +21,7 @@ class Calculo:
             gasto_alcool = round(
             (distancia / consumo_alcool) * self.__valor_alcool, 2)
         else:
-             raise Exception('Valor do consumo do combustível gasolina não informado.')
+             raise Exception('Valor do consumo do combustível gasolina não informado!')
 
         if(consumo_dies > 0):
             gasto_diesel = round(
